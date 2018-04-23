@@ -222,13 +222,16 @@ var AUWLBook = function() {
       /*
        * For bookmarklet case, no browser info in the request query parameters.
        */
+      migrationFlag = null;
       if (!browser) {
           browser = getBrowserType();
+          /*
           if (browser === 'ie') {
               migrationFlag = null;
           } else {
               migrationFlag = true;
           }
+          */
           window.bookmarkletRequest = true;
           window.UWLResponseDomain = gurupaServerName;
           window.UWLResponseLang   = "";
